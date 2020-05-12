@@ -1,0 +1,22 @@
+name: Docusaurus BuildDeploy Action
+description: Choose between Building and Deploying an action using this script.
+
+inputs:
+  source-folder:
+    description: source folder
+    required: false
+    default: 'website'
+  git-user:
+    description: git user name
+    required: true
+  git-password:
+    description: git password (defaults to secrets.GITHUB_TOKEN, which should work if it has default rights)
+    required: false
+
+runs:
+  using: docker
+  image: docker://otomi/docusaurus-deploy-action:v1
+  env:
+    SOURCE_FOLDER: ${{ inputs.source-folder }}
+    GIT_USER: ${{ inputs.git-user }}
+    GIT_PASSWORD: ${{ inputs.git-password }}
