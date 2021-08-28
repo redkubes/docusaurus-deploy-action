@@ -17,6 +17,8 @@ RUN apk update && \
   nasm
 # We need these deps for git and docusaurus
 
+# RUN npm install --unsafe-perm -g @docusaurus/core@next @docusaurus/preset-classic@next
+
 ADD entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]

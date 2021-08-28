@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@docusaurus/core": "^2.0.0-beta.5",
+    "@docusaurus/preset-classic": "^2.0.0-beta.5"
+  },
+  "name": "docusaurus-deploy-action",
+  "scripts": {
+    "build": "docusaurus build",
+    "release": "docusaurus docs:version",
+    "start": "docusaurus start",
+    "swizzle": "docusaurus swizzle"
+  },
+  "version": "0.2.0"
+}

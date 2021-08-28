@@ -12,11 +12,15 @@ inputs:
   git-password:
     description: git password (defaults to secrets.GITHUB_TOKEN, which should work if it has default rights)
     required: false
+  deployment-branch:
+    description: git branch to publish to (defaults to gh-pages)
+    required: false
 
 runs:
   using: docker
-  image: docker://otomi/docusaurus-deploy-action:v1
+  image: docker://otomi/docusaurus- deploy-action:v1
   env:
     SOURCE_FOLDER: ${{ inputs.source-folder }}
     GIT_USER: ${{ inputs.git-user }}
     GIT_PASSWORD: ${{ inputs.git-password }}
+    DEPLOYMENT_BRANCH: ${{ inputs.deployment-branch }}
