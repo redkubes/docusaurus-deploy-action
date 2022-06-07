@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 
 RUN apk update && \
   apk upgrade && \
@@ -15,9 +15,6 @@ RUN apk update && \
   libpng-dev \
   make \
   nasm
-# We need these deps for git and docusaurus
-
-# RUN npm install --unsafe-perm -g @docusaurus/core@next @docusaurus/preset-classic@next
 
 ADD entrypoint.sh /entrypoint.sh
 
