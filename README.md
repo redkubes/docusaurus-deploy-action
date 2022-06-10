@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: redkubes/docusaurus-deploy-action@master
+      - uses: redkubes/docusaurus-deploy-action@v1
         with:
           source-folder: website
           git-user: $SOME_USERNAME
